@@ -28,6 +28,8 @@ Cypress.Commands.add('login', (username, password) => {
     cy.get('#password').type('12345678')
     cy.get('.mat-button-wrapper').contains('Sign in').click() // click submit btn
 })
+
+
 Cypress.Commands.add('LoginSession', (username, password) => {
     cy.session([username, password], () => {
         //   cy.visit('http://localhost:4200')
