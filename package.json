@@ -1,0 +1,15 @@
+{
+  "name": "artharbour",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sonu",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.7.0",
+    "start-server-and-test": "^1.14.0"
+  }
+}

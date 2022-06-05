@@ -1,0 +1,6 @@
+{
+  "baseUrl": "http://localhost:4200",
+  "projectId": "g8mgbs",
+  "watchForFileChanges": true,
+  "experimentalSessionAndOrigin": true
+}
