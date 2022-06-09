@@ -2,8 +2,7 @@
 
 describe('LoginVarification', () => {
     beforeEach(() => {
-        cy.visit('localhost:4200')
-        
+        cy.visit(Cypress.config('baseUrl'))
     })
 
     it('Varify valid email id', () => {
