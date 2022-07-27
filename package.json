@@ -11,5 +11,8 @@
   "devDependencies": {
     "cypress": "^9.7.0",
     "start-server-and-test": "^1.14.0"
+  },
+  "dependencies": {
+    "cypress-page-object-model": "^1.0.26"
   }
 }

@@ -6,13 +6,18 @@ describe('Logout user', () => {
         cy.visit(Cypress.config('baseUrl'))
     })
 
-    it('logout check', () => {
+    it('UploadPost Artist', () => {
         
-        cy.get('[src="assets/icons/profile.svg"]').click()
+
+
+
+
+        
+        //cy.get('[src="assets/icons/profile.svg"]').click()
         //cy.get('input[name='Logout'])
         //cy.get('Logout').click()
         
-        cy.get('.mat-focus-indicator.mat-menu-item').contains('Logout').click()
+        //cy.get('.mat-focus-indicator.mat-menu-item').contains('Logout').click()
         
 
     })
