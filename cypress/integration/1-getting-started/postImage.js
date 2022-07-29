@@ -1,12 +1,14 @@
 /// <reference types="cypress" />
 
-describe("Post image as Artist", () => {
+describe("Post image", () => {
   beforeEach(() => {
     cy.visit(Cypress.config("baseUrl"));
   })
 
 
-  it('UploadPost ', () => {
+  it('Upload image as arist', () => {
+
+
   })
 
 
