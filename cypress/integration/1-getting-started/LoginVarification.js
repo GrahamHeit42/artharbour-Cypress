@@ -11,25 +11,25 @@ describe("LoginVarification", () => {
     cy.get("#password").type("12345678");
     cy.get(".mat-button-wrapper").contains("Sign in").click();
   }),
-    // cy.get('.mat-button-wrapper').contains('Login').click()
-    // cy.get('.text-md font-medium text-primary-500 hover:underline').click()
-    // cy.focused('Forgot password?').click()
-    // cy.contains('Forgot password? ').click()
-    // cy.wait(1000)
-    // cy.get('#email').click().then(() => {
-    // })
-    // cy.contains('Send reset link').click()
 
-    it("5.exist user can able to reset-password ", () => {
-      cy.get(".mat-button-wrapper").contains("Login").click();
-      loc_Forget_password_link().click();
-      cy.wait(1000);
-      cy.get("#email")
-        .click()
-        .then(() => {
-          cy.get("#email").type("Dhruv@gmail.com");
-        });
-    }),
+    it('should not allow blank username', () => {
+      cy.get('.mat-button-wrapper').contains('Login').click()
+      cy.get('#password').type('12345678')
+      cy.get('.mat-button-wrapper').contains('Sign in').click()
+      cy.get('[aria-atomic="true"]').should('contain.text', ' Email address is required ')
+      // cy.get('mat-error').should('contain.text',' Email address is required ')
+    })
+
+  it("5.exist user can able to reset-password ", () => {
+    cy.get(".mat-button-wrapper").contains("Login").click();
+    loc_Forget_password_link().click();
+    cy.wait(1000);
+    cy.get("#email")
+      .click()
+      .then(() => {
+        cy.get("#email").type("Dhruv@gmail.com");
+      });
+  }),
     it("6. User sing in (not exist user)", () => {
       cy.get(".mat-button-wrapper").contains("Login").click();
       cy.wait(1000);
