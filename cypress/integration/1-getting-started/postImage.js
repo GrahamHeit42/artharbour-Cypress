@@ -30,7 +30,6 @@ describe("Post image", () => {
     // cy.wait(1000);
     // cy.get('.mat-radio-label-content').contains('Mature ').click();
     // cy.wait(1000);
-
   })
   it('Upload image as Commissioned', () => {
     cy.get('[src="assets/icons/plus.png"]').click()
