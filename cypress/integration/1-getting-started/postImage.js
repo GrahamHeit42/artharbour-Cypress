@@ -60,4 +60,5 @@ describe("Post image", () => {
     cy.get('mat-icon').contains('star_border').click();
     cy.get('mat-icon').contains('star_border').click();
   })
+  test
 })
