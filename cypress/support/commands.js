@@ -34,8 +34,10 @@ Cypress.Commands.add('LoginSession', (username, password) => {
     cy.session([username, password], () => {
         //   cy.visit('http://localhost:4200')
         cy.visit('/')
+        cy.wait(1000);
         cy.get('.mat-button-wrapper').contains('Login').click()
         cy.get('#email').type(username)
+     
         cy.get('#password').type(password)
         cy.get('.mat-button-wrapper').contains('Sign in').click()
         // cy.get('[src="assets/icons/profile.svg"]').contains('');
@@ -49,6 +51,13 @@ Cypress.Commands.add('LoginSession', (username, password) => {
         // cy.get('[src="assets/icons/profile.svg"]').click()
     })
 })
+
+
+Cypress.Commands.add('getId', (value) => cy.get(`[id="${value}"]`))
+// it('spaces in id', () => {
+//   cy.visit('index.html')
+//   cy.getId('Concept / Preparation')
+// })
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
 //
