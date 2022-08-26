@@ -34,10 +34,11 @@ Cypress.Commands.add('LoginSession', (username, password) => {
     cy.session([username, password], () => {
         //   cy.visit('http://localhost:4200')
         cy.visit('/')
-        cy.wait(1000);
+        // cy.wait(1000);
         cy.get('.mat-button-wrapper').contains('Login').click()
+        cy.wait(100);
         cy.get('#email').type(username)
-     
+
         cy.get('#password').type(password)
         cy.get('.mat-button-wrapper').contains('Sign in').click()
         // cy.get('[src="assets/icons/profile.svg"]').contains('');
